@@ -20,7 +20,7 @@ export const theme = {
       color: '#a9a9a9',
     },
     title: {
-      fontSize: 'rem',
+      fontSize: '1rem',
       color: '#a9a9a9',
     },
   },

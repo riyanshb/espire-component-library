@@ -1,4 +1,3 @@
-// ThemeContext.ts
 import React from 'react';
 
 interface Colors {
