@@ -20,24 +20,7 @@ export const theme = createTheme({
     h1: {
       fontSize: '2.5rem',
     },
-    h2: {
-      fontSize: '2rem',
-    },
-    h3: {
-      fontSize: '1.5rem',
-    },
-    h4: {
-      fontSize: '1rem',
-    },
-    subtitle1: {
-      fontSize: 12,
-    },
-    body1: {
-      fontWeight: 500,
-    },
-    button: {
-      fontStyle: 'italic',
-    },
+    header: {},
   },
   spacing: 8,
   breakpoints: {
