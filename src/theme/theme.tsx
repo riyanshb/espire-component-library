@@ -20,7 +20,10 @@ export const theme = createTheme({
     h1: {
       fontSize: '2.5rem',
     },
-    header: {},
+    header: {
+      fontSize: '20px',
+      fontWeight: '18',
+    },
   },
   spacing: 8,
   breakpoints: {
