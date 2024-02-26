@@ -1,0 +1,31 @@
+.appbar {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #254c91;
+  color: #fff;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.icon {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.username_email {
+  margin-top: 5px;
+}

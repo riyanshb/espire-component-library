@@ -1,77 +1,16 @@
-// GridComponent.stories.tsx
 import { Story, Meta } from '@storybook/react';
-import GridComponent from '../erf_grid/erf_grid';
+import Grid, { GridProps } from './erf_grid';
 
 export default {
-  title: 'Components/GridComponent',
-  component: GridComponent,
+  title: 'Components/Grid',
+  component: Grid,
 } as Meta;
 
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  avatarUrl: string;
-}
+const Template: Story<GridProps> = (args) => <Grid {...args} />;
 
-interface Props {
-  users: User[];
-}
-
-const defaultUsers: User[] = [
-  {
-    id: 1,
-    name: 'Rivanshu Jain',
-    email: 'rivanshu@espire.com',
-    avatarUrl: '.././assets/truckk1.webp',
-  },
-  {
-    id: 2,
-    name: 'Deebendu Kumar',
-    email: 'deebendu.kumar@espire.com',
-    avatarUrl: 'https://example.com/avatar2.png',
-  },
-  {
-    id: 1,
-    name: 'Rivanshu Jain',
-    email: 'rivanshu@espire.com',
-    avatarUrl: 'https://example.com/avatar1.png',
-  },
-  {
-    id: 2,
-    name: 'Deebendu Kumar',
-    email: 'deebendu.kumar@espire.com',
-    avatarUrl: 'https://example.com/avatar2.png',
-  },
-  {
-    id: 1,
-    name: 'Rivanshu Jain',
-    email: 'rivanshu@espire.com',
-    avatarUrl: 'https://example.com/avatar1.png',
-  },
-  {
-    id: 2,
-    name: 'Deebendu Kumar',
-    email: 'deebendu.kumar@espire.com',
-    avatarUrl: 'https://example.com/avatar2.png',
-  },
-  {
-    id: 1,
-    name: 'Rivanshu Jain',
-    email: 'rivanshu@espire.com',
-    avatarUrl: 'https://example.com/avatar1.png',
-  },
-  {
-    id: 2,
-    name: 'Deebendu Kumar',
-    email: 'deebendu.kumar@espire.com',
-    avatarUrl: 'https://example.com/avatar2.png',
-  },
-];
-
-const Template: Story<Props> = (args) => <GridComponent {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  users: defaultUsers,
+export const BasicGrid = Template.bind({});
+BasicGrid.args = {
+  rows: 3,
+  columns: 4,
+  cardsPerRow: 3,
 };

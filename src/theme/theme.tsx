@@ -3,7 +3,7 @@ import { createTheme } from '@mui/material/styles';
 export const theme = createTheme({
   palette: {
     primary: {
-      main: '#1976d2',
+      main: '#254c91',
       light: '#42a5f5',
       dark: '#1565c0',
       contrastText: '#fff',
@@ -16,12 +16,12 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Raleway, Arial',
+    fontFamily: 'Raleway',
     h1: {
       fontSize: '2.5rem',
     },
     header: {
-      fontSize: '20px',
+      fontSize: '16px',
       fontWeight: '18',
     },
   },
