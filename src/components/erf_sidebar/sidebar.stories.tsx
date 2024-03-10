@@ -1,15 +1,11 @@
-import { Story, Meta } from '@storybook/react';
-import Sidebar, { SidebarProps } from './sidebar';
+import { Story, Meta } from '@storybook/react/';
+import SideMenuBar from './sidebar';
 
 export default {
-  title: 'Components/Sidebar',
-  component: Sidebar,
+  title: 'Components/SideSSSBar',
+  component: SideMenuBar,
 } as Meta;
 
-const Template: Story<SidebarProps> = (args) => <Sidebar {...args} />;
-const companyLogo = 'assets/truckk1.webp';
+const Template: Story = (args) => <SideMenuBar {...args} />;
+
 export const Default = Template.bind({});
-Default.args = {
-  companyLogo: companyLogo,
-  toggleSidebar: () => {},
-};
