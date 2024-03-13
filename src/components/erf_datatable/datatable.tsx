@@ -25,7 +25,7 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
     minPrice: '',
     maxPrice: '',
   });
-
+  console.log(filters);
   const handleFilterChange = (filter: any) => {
     setFilters(filter);
     filterData(filter);
@@ -50,6 +50,7 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
 
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
+    console.log(event);
   };
 
   const handleChangeRowsPerPage = (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import SideMenuLink from './sidebarlink';
 import DashboardIcon from '@material-ui/icons/Dashboard';
@@ -34,9 +34,8 @@ const useStyles = makeStyles({
 
 const SideMenuBar: React.FC = () => {
   const classes = useStyles();
-  const [open, setOpen] = useState<boolean>(true);
   return (
-    <div className={`${classes.root} ${open ? 'open' : 'closed'}`}>
+    <div>
       <div className={classes.header}>
         <img
           src={`assets/companylogo.JPG`}

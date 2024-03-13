@@ -71,6 +71,7 @@ const BasicDataTable: React.FC = () => {
 
   const handleSave = (id: number) => {
     setEditingId(null);
+    console.log(id);
   };
 
   const handleCancel = () => {

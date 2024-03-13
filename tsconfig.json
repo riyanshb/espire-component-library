@@ -4,6 +4,10 @@
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "espire-component-library/*": ["node_modules/espire-component-library/*"]
+    },
     "skipLibCheck": true,
 
     /* Bundler mode */
