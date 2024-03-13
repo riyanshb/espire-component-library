@@ -1,6 +1,6 @@
 {
   "name": "espire-component-library",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -37,7 +37,7 @@
     "sass": "^1.69.7"
   },
   "exports": {
-    "./": "./"
+    "." : "./src/"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.8",
