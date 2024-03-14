@@ -36,9 +36,9 @@
     "react-dom": "^18.2.0",
     "sass": "^1.69.7"
   },
-  
+
   "exports": {
-    "./components/erf_appbar" : "./src/components/erf_appbar/"
+    "/erf_appbar" : "./src/components/erf_appbar/aapbar.tsx"
   },
 
   "devDependencies": {
@@ -68,5 +68,4 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   }
-  
 }
