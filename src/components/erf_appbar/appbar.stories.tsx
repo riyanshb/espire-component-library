@@ -1,8 +1,8 @@
-import Header from './appbar';
+import ERFAppbar from './appbar';
 
 export default {
   title: 'Components/Appbar',
-  component: Header,
+  component: ERFAppbar,
 };
 
-export const Default = () => <Header />;
+export const Default = () => <ERFAppbar />;

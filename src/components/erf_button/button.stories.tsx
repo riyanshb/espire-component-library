@@ -1,9 +1,9 @@
 import { Story, Meta } from '@storybook/react';
-import Button from '../erf_button/button';
+import ERFButton from '../erf_button/button';
 
 export default {
   title: 'Components/Button',
-  component: Button,
+  component: ERFButton,
 } as Meta;
 
 interface ButtonStoryProps {
@@ -11,7 +11,7 @@ interface ButtonStoryProps {
   variant?: 'primary' | 'secondary' | 'error' | 'text' | 'outlined';
 }
 
-const Template: Story<ButtonStoryProps> = (args) => <Button {...args} />;
+const Template: Story<ButtonStoryProps> = (args) => <ERFButton {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

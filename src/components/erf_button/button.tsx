@@ -8,7 +8,7 @@ interface ButtonProps {
   disabled?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({
+const ERFButton: React.FC<ButtonProps> = ({
   text,
   variant = 'primary',
   onClick,
@@ -22,4 +22,4 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export default Button;
+export default ERFButton;

@@ -1,6 +1,6 @@
 {
   "name": "espire-component-library",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -36,9 +36,11 @@
     "react-dom": "^18.2.0",
     "sass": "^1.69.7"
   },
+  
   "exports": {
-    "." : "./src/"
+    "./components/erf_appbar" : "./src/components/erf_appbar/"
   },
+
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.8",
     "@storybook/addon-interactions": "^7.6.8",

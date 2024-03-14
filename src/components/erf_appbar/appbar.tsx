@@ -16,7 +16,7 @@ import {
 } from '@mui/icons-material';
 import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
 
-const Header: React.FC = () => {
+const ERFAppbar: React.FC = () => {
   return (
     <AppBar
       position='static'
@@ -106,4 +106,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default ERFAppbar;
