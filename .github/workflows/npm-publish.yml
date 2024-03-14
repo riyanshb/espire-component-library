@@ -20,7 +20,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.17.1
-      - run: npm install --only=production --legacy-peer-deps
+      - run: |
+          npm install --legacy-peer-deps
+          if [ "$NODE_ENV" != "production" ]; then npm install husky --save-dev; fi
       - run: npm run build
 
   publish-npm:
