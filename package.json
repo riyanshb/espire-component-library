@@ -1,11 +1,12 @@
 {
   "name": "espire-component-library",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.6",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc",
+    "main": "dist/main.tsx",
+    "prepublishOnly": "npm run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write ./src",
@@ -16,20 +17,30 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "npm run format",
-      "npm run lint"
+      "npm run format"
     ]
   },
+  "files": [
+    "dist/"
+  ],
+
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@fontsource/material-icons": "^5.0.11",
     "@fontsource/roboto": "^5.0.8",
-    "@mui/material": "^5.15.4",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/icons-material": "^5.15.11",
+    "@mui/material": "^5.15.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.69.7"
   },
+
+  "exports": {
+    "/erf_appbar" : "./src/components/erf_appbar/aapbar.tsx"
+  },
+
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.8",
     "@storybook/addon-interactions": "^7.6.8",
