@@ -20,8 +20,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.17.1
-      - run: npm install --legacy-peer-deps
       - run: npm i @storybook/csf
+      - run: npm install --legacy-peer-deps
       - run: npm run build
 
   publish-npm:
