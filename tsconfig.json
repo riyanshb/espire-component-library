@@ -8,7 +8,7 @@
     "paths": {
       "espire-component-library/*": ["node_modules/espire-component-library/*"]
     },
-    "skipLibCheck": false,
+    "skipLibCheck": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
