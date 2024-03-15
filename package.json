@@ -13,7 +13,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky install"
+    "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then npm install --legacy-peer-deps; fi"
   },
   "lint-staged": {
     "src/**/*": [
