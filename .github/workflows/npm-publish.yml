@@ -21,6 +21,7 @@ jobs:
         with:
           node-version: 16.17.1
       - run: npm install --legacy-peer-deps
+      - run: npm i @storybook/csf
       - run: npm run build
 
   publish-npm:
