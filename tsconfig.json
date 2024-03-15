@@ -8,7 +8,7 @@
     "paths": {
       "espire-component-library/*": ["node_modules/espire-component-library/*"]
     },
-    "skipLibCheck": true,
+    "skipLibCheck": false,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -25,6 +25,7 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src","./types.d.ts"],
+  /*exclude stories.tsx for prod env*/
   "exclude": ["**/*.stories.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
