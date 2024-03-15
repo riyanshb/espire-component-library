@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.17.1
-      - run: npm install --only=production --legacy-peer-deps --ignore-scripts --omit="@storybook*"
+      - run: npm install --only=production --force --ignore-scripts --omit="@storybook*"
       - run: npm run build
 
   publish-npm:
