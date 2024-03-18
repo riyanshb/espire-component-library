@@ -10,8 +10,7 @@
     "format": "prettier --write ./src",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "prepare": "npm husky install"
+    "build-storybook": "storybook build"
   },
   "lint-staged": {
     "src/**/*": [
