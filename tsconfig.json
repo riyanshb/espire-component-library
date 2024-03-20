@@ -8,10 +8,11 @@
     "declaration": true,
     "declarationDir": "./dist",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "es2015",
+    "module": "CommonJS",
+    "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "@rivanshu/components": ["node_modules/@rivanshu/components*"]
+      "@rivanshu/components": ["node_modules/@rivanshu/components/*"]
     },
     "skipLibCheck": true,
 
@@ -21,15 +22,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
 
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src","./types.d.ts", "src/index.ts", "*.tsx", "src/**/*.ts"],
+  "include": ["src","./types.d.ts", "src/index.ts", "*.tsx", "src/**/*.ts", "src/**/*.tsx"],
   /*exclude stories.tsx for prod env*/
-  "exclude": ["**/*.stories.tsx"],
+  "exclude": ["**/*.stories.tsx", "node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
