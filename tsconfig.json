@@ -2,29 +2,33 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationDir": "./dist",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
+    "module": "es2015",
     "baseUrl": ".",
     "paths": {
-      "espire-component-library/*": ["node_modules/espire-component-library/*"]
+      "@rivanshu/components": ["node_modules/@rivanshu/components*"]
     },
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
 
-    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src","./types.d.ts"],
+  "include": ["src","./types.d.ts", "src/index.ts", "*.tsx", "src/**/*.ts"],
   /*exclude stories.tsx for prod env*/
   "exclude": ["**/*.stories.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
