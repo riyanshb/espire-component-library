@@ -1,6 +1,6 @@
 {
   "name": "@rivanshu/components",
-  "version": "0.2.0",
+  "version": "0.2.6",
   "type": "module",
   "private": false,
   "scripts": {
@@ -21,9 +21,8 @@
       "npm run format"
     ]
   },
-  "files": [
-    "dist/"
-  ],
+
+  "files": ["dist/"],
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",

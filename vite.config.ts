@@ -7,12 +7,12 @@ export default defineConfig({
   build: {
     minify:false,
     
-        outDir: 'dist', // Output directory
+        outDir: 'dist', 
     lib: {
-      entry: './src/index.ts', // Entry point for the library
+      entry: './src/index.ts', 
       formats: ['es', 'cjs'],
-      name: 'Appbar', // Name of the library (optional)
-      fileName: () => 'Appbar.js' // Specify the output filename
+      name: 'Appbar', 
+      fileName: () => 'Appbar.js' 
     },
     rollupOptions: {
       external: /^react($|\/)/,
