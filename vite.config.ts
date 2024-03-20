@@ -5,9 +5,8 @@ import VitePresetReact from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react(), VitePresetReact()],
   build: {
-    minify:false,
-    
-        outDir: 'dist', 
+    minify: false,
+    outDir: 'dist', 
     lib: {
       entry: './src/index.ts', 
       formats: ['es', 'cjs'],
@@ -21,6 +20,6 @@ export default defineConfig({
               react: 'React'
           }
       }
+    }
   }
-  }
-})
+});
