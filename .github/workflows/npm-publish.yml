@@ -32,7 +32,9 @@ jobs:
         with:
           node-version: 18.0.0
           registry-url: https://registry.npmjs.org/
-      - run: cp -R dist/ build/
+      - run: npm run build
+      - name: Copy dist folder
+        run: cp -R path/to/dist/ build/
       - run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
