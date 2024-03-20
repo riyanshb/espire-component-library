@@ -30,6 +30,6 @@
   },
   "include": ["src","./types.d.ts", "src/index.ts", "*.tsx", "src/**/*.ts"],
   /*exclude stories.tsx for prod env*/
- // "exclude": ["**/*.stories.tsx"],
+  "exclude": ["**/*.stories.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
