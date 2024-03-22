@@ -1,5 +1,11 @@
 import React from 'react';
 import './appbar.css';
+import SearchOutlined from '@mui/icons-material/SearchOutlined';
+import MailOutline from '@mui/icons-material/MailOutline';
+import NotificationsNone from '@mui/icons-material/MailOutline';
+
+import AccessTimeRoundedIcon from '@mui/icons-material/MailOutline';
+
 import {
   AppBar,
   Toolbar,
@@ -9,14 +15,22 @@ import {
   Avatar,
   Typography,
 } from '@mui/material';
-import {
-  SearchOutlined,
-  MailOutline,
-  NotificationsNone,
-} from '@mui/icons-material';
-import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
 
-const ERFAppbar: React.FC = () => {
+export interface ERFAppbarProps {
+  companyAvatarSrc: string;
+  companyName: string;
+  searchPlaceholder: string;
+  loginButtonText: string;
+  userAvatarSrc: string;
+}
+
+const ERFAppbar: React.FC<ERFAppbarProps> = ({
+  companyAvatarSrc,
+  companyName,
+  searchPlaceholder,
+  loginButtonText,
+  userAvatarSrc,
+}) => {
   return (
     <AppBar
       position='static'
@@ -34,7 +48,7 @@ const ERFAppbar: React.FC = () => {
         >
           <Avatar
             alt='Company Avatar'
-            src='assets/companylogo.JPG'
+            src={companyAvatarSrc}
             style={{ height: '50px', width: '50px' }}
           />
           <Typography
@@ -48,7 +62,7 @@ const ERFAppbar: React.FC = () => {
               fontWeight: '400',
             }}
           >
-            Espire Infolabs
+            {companyName}
           </Typography>
         </div>
 
@@ -64,14 +78,12 @@ const ERFAppbar: React.FC = () => {
             <SearchOutlined style={{ color: 'grey', marginTop: '7px' }} />
           </div>
           <InputBase
-            placeholder='Search here...'
-            classes={{
-              root: 'header__inputRoot',
-              input: 'header__inputInput',
-            }}
+            placeholder={searchPlaceholder}
+            classes={{ root: 'header__inputRoot', input: 'header__inputInput' }}
             inputProps={{ 'aria-label': 'search' }}
           />
         </div>
+
         <div
           className='header__right'
           style={{ marginLeft: '10px', color: 'red' }}
@@ -84,7 +96,7 @@ const ERFAppbar: React.FC = () => {
               fontWeight: 'normal',
             }}
           >
-            Login
+            {loginButtonText}
           </Button>
           <IconButton color='inherit' aria-label='messages'>
             <MailOutline style={{ color: 'grey', marginLeft: '8px' }} />
@@ -97,7 +109,7 @@ const ERFAppbar: React.FC = () => {
           </IconButton>
           <Avatar
             alt='User Avatar'
-            src='assets/user_img.jpg'
+            src={userAvatarSrc}
             style={{ marginLeft: '7px', height: '50px', width: '50px' }}
           />
         </div>
