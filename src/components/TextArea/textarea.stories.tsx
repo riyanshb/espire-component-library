@@ -1,6 +1,5 @@
 import { Story, Meta } from '@storybook/react';
 import TextArea from './textarea';
-import React from 'react';
 
 export default {
   title: 'Components/TextArea',
