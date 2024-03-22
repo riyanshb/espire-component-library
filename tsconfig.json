@@ -22,15 +22,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
-
+    "jsx": "react-jsx",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src","./types.d.ts", "src/index.ts", "*.tsx", "src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src","./types.d.ts","**/*.stories.tsx", "src/index.ts", "*.tsx", "src/**/*.ts", "src/**/*.tsx"],
   /*exclude stories.tsx for prod env*/
-  "exclude": ["**/*.stories.tsx", "node_modules"],
+  "exclude": [ "node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
