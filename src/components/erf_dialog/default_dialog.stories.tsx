@@ -2,7 +2,6 @@ import { Story, Meta } from '@storybook/react';
 import UserFormDialog from './default_dialog';
 import DeleteConfirmationDialog from './alertdialog';
 import EmployeeDialog from './employee_form_dialog';
-import React from 'react';
 
 export default {
   title: 'Components/Dialog',

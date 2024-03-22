@@ -1,36 +1,31 @@
-/* sidebar.css */
-
 .sidebar {
-  width: 200px; /* Adjust width as needed */
-  background-color: #f0f0f0; /* Sidebar background color */
-  padding: 10px; /* Adjust padding as needed */
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 10px;
 }
 
 ul {
-  list-style-type: none; /* Remove default list styles */
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
 .icon {
-  margin-right: 5px; /* Adjust icon margin as needed */
-  font-size: 20px; /* Adjust icon size as needed */
+  margin-right: 5px;
+  font-size: 20px;
 }
 
 .text {
-  /* Add styles for text */
 }
 
 .subtext {
-  /* Add styles for subtext */
 }
 
 .vertical li {
   display: flex;
-  flex-direction: column; /* Items stack vertically */
+  flex-direction: column;
 }
-
 .horizontal li {
   display: flex;
-  align-items: center; /* Items align horizontally */
+  align-items: center;
 }

@@ -1,6 +1,5 @@
 import { Story, Meta } from '@storybook/react';
 import ERFButton from '../erf_button/button';
-import React from 'react';
 
 export default {
   title: 'Components/Button',
