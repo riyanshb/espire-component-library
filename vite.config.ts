@@ -1,9 +1,11 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react-swc';
 import VitePresetReact from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react(), VitePresetReact()],
+  plugins: [ VitePresetReact()],
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
   build: {
     minify: false,
     outDir: 'dist', 

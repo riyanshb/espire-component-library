@@ -3,6 +3,7 @@ import DataTable from './datatable';
 import { dummyData } from './sampledata';
 import BasicDataTable from './basic_datatable';
 import ParameterisedDataTable from './parameterised_datatable/parameterised_datatabel';
+import React from 'react';
 
 const columns = [
   { id: 'avatar', label: 'Name', avatar: true },
