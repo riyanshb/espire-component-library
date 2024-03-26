@@ -1,0 +1,29 @@
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.list-item:hover {
+  background-color: #f0f0f0;
+}
+
+.list-item-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.list-item-content {
+  flex: 1;
+}
+
+.list-item-text {
+  font-weight: bold;
+}
+
+.list-item-subtext {
+  color: #666;
+}
