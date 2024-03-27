@@ -2,10 +2,10 @@ import React from 'react';
 import './listview.css';
 
 export interface ListItemProps {
-  icon: string;
-  text: string;
-  subtext: string;
-  onClick: () => void;
+  icon?: string;
+  text?: string;
+  subtext?: string;
+  onClick?: () => void;
 }
 
 const ERFListItem: React.FC<ListItemProps> = ({
@@ -16,7 +16,9 @@ const ERFListItem: React.FC<ListItemProps> = ({
 }) => {
   return (
     <div className='list-item' onClick={onClick}>
-      <img src={icon} alt='icon' className='list-item-icon' />
+      <div style={{ flex: 1 }}>
+        <img src={icon} alt='icon' className='list-item-icon' />
+      </div>
       <div className='list-item-content'>
         <div className='list-item-text'>{text}</div>
         <div className='list-item-subtext'>{subtext}</div>
