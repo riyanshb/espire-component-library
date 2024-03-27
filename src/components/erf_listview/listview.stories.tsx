@@ -1,15 +1,15 @@
 import { Story, Meta } from '@storybook/react';
-import ListItem, { ListItemProps } from './listview';
+import ERFListItem, { ListItemProps } from './listview';
 
 export default {
   title: 'Components/ListItem',
-  component: ListItem,
+  component: ERFListItem,
 } as Meta;
 
 const Template: Story<{ items: ListItemProps[] }> = ({ items }) => (
   <>
     {items.map((item, index) => (
-      <ListItem key={index} {...item} />
+      <ERFListItem key={index} {...item} />
     ))}
   </>
 );
