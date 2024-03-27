@@ -1,13 +1,13 @@
 import { Story, Meta } from '@storybook/react';
-import BottomMenuBar, { BottomMenuBarProps } from './bottom_menubar';
+import ERFBottomMenuBar, { BottomMenuBarProps } from './bottom_menubar';
 
 export default {
   title: 'Components/BottomMenuBar',
-  component: BottomMenuBar,
+  component: ERFBottomMenuBar,
 } as Meta;
 
 const Template: Story<BottomMenuBarProps> = (args) => (
-  <BottomMenuBar {...args} />
+  <ERFBottomMenuBar {...args} />
 );
 
 export const FiveValues = Template.bind({});

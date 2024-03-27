@@ -14,7 +14,7 @@ export interface BottomMenuBarProps {
   textHeight: string;
 }
 
-const BottomMenuBar: React.FC<BottomMenuBarProps> = ({
+const ERFBottomMenuBar: React.FC<BottomMenuBarProps> = ({
   items,
   iconWidth,
   iconHeight,
@@ -50,4 +50,4 @@ const BottomMenuBar: React.FC<BottomMenuBarProps> = ({
   );
 };
 
-export default BottomMenuBar;
+export default ERFBottomMenuBar;
