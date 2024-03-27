@@ -28,8 +28,8 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src","./types.d.ts", "src/index.ts", "*.tsx", "src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src","./types.d.ts", "**/*.stories.tsx", "src/index.ts", "*.tsx", "src/**/*.ts", "src/**/*.tsx"],
   /*exclude stories.tsx for prod env*/
-  "exclude": ["**/*.stories.tsx"],
+  //"exclude": ["**/*.stories.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
