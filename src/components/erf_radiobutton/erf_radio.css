@@ -1,0 +1,16 @@
+.radio-button {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-button.horizontal {
+  flex-direction: row;
+}
+
+.radio-option {
+  margin-right: 10px;
+}
+
+.radio-option:last-child {
+  margin-right: 0;
+}

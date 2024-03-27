@@ -8,8 +8,8 @@ export default {
 
 const Template: Story<ERFAppbarProps> = (args) => <ERFAppbar {...args} />;
 
-export const Example: Story<ERFAppbarProps> = Template.bind({});
-Example.args = {
+export const CustomAppbar: Story<ERFAppbarProps> = Template.bind({});
+CustomAppbar.args = {
   companyAvatarSrc: 'assets/companylogo.JPG',
   companyName: 'Espire Infolabs',
   searchPlaceholder: 'Search here...',

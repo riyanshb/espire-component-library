@@ -1,0 +1,19 @@
+.toast-message {
+  display: flex;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.toast-message.success {
+  background-color: #28a745;
+}
+
+.toast-message.error {
+  background-color: #dc3545;
+}
+
+.message {
+  flex-grow: 1;
+  padding: 8px;
+}
