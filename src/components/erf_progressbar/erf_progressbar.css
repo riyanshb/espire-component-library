@@ -1,0 +1,8 @@
+.circular-percentage {
+  display: flex;
+  align-items: center;
+}
+
+.percentage-text {
+  margin-left: 10px;
+}

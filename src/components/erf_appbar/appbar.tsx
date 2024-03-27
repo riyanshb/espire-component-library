@@ -2,13 +2,9 @@ import React from 'react';
 import './appbar.css';
 import SearchOutlined from '@mui/icons-material/SearchOutlined';
 import MailOutline from '@mui/icons-material/MailOutline';
-import NotificationsNone from '@mui/icons-material/MailOutline';
-
-import AccessTimeRoundedIcon from '@mui/icons-material/MailOutline';
+import NotificationsNone from '@mui/icons-material/NotificationAddOutlined';
 
 import {
-  AppBar,
-  Toolbar,
   IconButton,
   Button,
   InputBase,
@@ -32,17 +28,16 @@ const ERFAppbar: React.FC<ERFAppbarProps> = ({
   userAvatarSrc,
 }) => {
   return (
-    <AppBar
-      position='static'
-      style={{ backgroundColor: 'whitesmoke', height: '62px' }}
-    >
-      <Toolbar>
+    <div style={{ position: 'static', backgroundColor: 'whitesmoke' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <div
+          className='left-element'
           style={{
             display: 'flex',
-            marginRight: '40px',
+            marginLeft: '20px',
+
             alignItems: 'center',
-            width: '400px',
+            width: '300px',
             marginBottom: '2px',
           }}
         >
@@ -67,54 +62,60 @@ const ERFAppbar: React.FC<ERFAppbarProps> = ({
         </div>
 
         <div
-          className='header__search'
-          style={{
-            marginLeft: '550px',
-            height: '35px',
-            backgroundColor: '#EFEEEE',
-          }}
+          className='right-element'
+          style={{ display: 'flex', marginRight: '20px' }}
         >
-          <div className='header__searchIcon' style={{ color: 'red' }}>
-            <SearchOutlined style={{ color: 'grey', marginTop: '7px' }} />
-          </div>
-          <InputBase
-            placeholder={searchPlaceholder}
-            classes={{ root: 'header__inputRoot', input: 'header__inputInput' }}
-            inputProps={{ 'aria-label': 'search' }}
-          />
-        </div>
-
-        <div
-          className='header__right'
-          style={{ marginLeft: '10px', color: 'red' }}
-        >
-          <Button
-            variant='contained'
+          <div
+            className='header__search'
             style={{
-              borderRadius: '50px',
-              fontSize: '12px',
-              fontWeight: 'normal',
+              height: '35px',
+              backgroundColor: '#EFEEEE',
+              marginTop: '10px',
             }}
           >
-            {loginButtonText}
-          </Button>
-          <IconButton color='inherit' aria-label='messages'>
-            <MailOutline style={{ color: 'grey', marginLeft: '8px' }} />
-          </IconButton>
-          <IconButton color='inherit' aria-label='notifications'>
-            <NotificationsNone style={{ color: 'grey' }} />
-          </IconButton>
-          <IconButton color='inherit' aria-label='notifications'>
-            <AccessTimeRoundedIcon style={{ color: 'grey' }} />
-          </IconButton>
-          <Avatar
-            alt='User Avatar'
-            src={userAvatarSrc}
-            style={{ marginLeft: '7px', height: '50px', width: '50px' }}
-          />
+            <div className='header__searchIcon'>
+              <SearchOutlined style={{ color: 'grey', marginTop: '7px' }} />
+            </div>
+            <InputBase
+              placeholder={searchPlaceholder}
+              classes={{
+                root: 'header__inputRoot',
+                input: 'header__inputInput',
+              }}
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </div>
+
+          <div
+            className='header__right'
+            style={{ marginLeft: '10px', color: 'red' }}
+          >
+            <Button
+              variant='contained'
+              style={{
+                borderRadius: '50px',
+                fontSize: '12px',
+                fontWeight: 'normal',
+              }}
+            >
+              {loginButtonText}
+            </Button>
+            <IconButton color='inherit' aria-label='messages'>
+              <MailOutline style={{ color: 'grey', marginLeft: '8px' }} />
+            </IconButton>
+            <IconButton color='inherit' aria-label='messages'>
+              <NotificationsNone style={{ color: 'grey', marginLeft: '8px' }} />
+            </IconButton>
+
+            <Avatar
+              alt='User Avatar'
+              src={userAvatarSrc}
+              style={{ marginLeft: '7px', height: '50px', width: '50px' }}
+            />
+          </div>
         </div>
-      </Toolbar>
-    </AppBar>
+      </div>
+    </div>
   );
 };
 
