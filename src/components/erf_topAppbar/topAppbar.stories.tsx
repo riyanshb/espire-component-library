@@ -1,4 +1,4 @@
-import type { Meta, Story } from '@storybook/react';
+import type { Story } from '@storybook/react';
 import ERFTopAppbar, { ERFTopAppbarProps } from './topAppbar';
 
 export default {

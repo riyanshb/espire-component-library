@@ -8,7 +8,7 @@ export interface ListItemProps {
   onClick: () => void;
 }
 
-const ListItem: React.FC<ListItemProps> = ({
+const ERFListItem: React.FC<ListItemProps> = ({
   icon,
   text,
   subtext,
@@ -25,4 +25,4 @@ const ListItem: React.FC<ListItemProps> = ({
   );
 };
 
-export default ListItem;
+export default ERFListItem;
