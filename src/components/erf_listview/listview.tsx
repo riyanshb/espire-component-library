@@ -15,11 +15,11 @@ const ERFListItem: React.FC<ListItemProps> = ({
   onClick,
 }) => {
   return (
-    <div className='list-item' onClick={onClick}>
-      <div style={{ flex: 1 }}>
+    <div className='list-item' style={{ display: 'flex' }} onClick={onClick}>
+      <div style={{ marginLeft: '15px' }}>
         <img src={icon} alt='icon' className='list-item-icon' />
       </div>
-      <div className='list-item-content'>
+      <div className='list-item-content' style={{ marginLeft: '15px' }}>
         <div className='list-item-text'>{text}</div>
         <div className='list-item-subtext'>{subtext}</div>
       </div>

@@ -1,11 +1,17 @@
 .bottom-menu-bar {
+  width: 100%;
+  position: fixed;
+
+  bottom: 0;
+  background-color: #f0f0f0;
+}
+.bottom-container {
   display: flex;
   width: 100%;
   position: fixed;
   bottom: 0;
   background-color: #f0f0f0;
 }
-
 .menu-bar-item {
   flex: 1;
   display: flex;

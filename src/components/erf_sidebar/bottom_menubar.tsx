@@ -24,28 +24,33 @@ const ERFBottomMenuBar: React.FC<BottomMenuBarProps> = ({
   const menuBarItemWidth = `${100 / items.length}%`;
 
   return (
-    <div className='bottom-menu-bar'>
-      {items.map((item, index) => (
-        <div
-          key={index}
-          className='menu-bar-item'
-          style={{ width: menuBarItemWidth }}
-        >
-          <div className='icon-container'>
-            <img
-              src={item.icon}
-              alt='icon'
-              style={{ width: iconWidth, height: iconHeight }}
-            />
-          </div>
+    <div>
+      <div
+        className='bottom-container'
+        style={{ display: 'flex', flexDirection: 'row' }}
+      >
+        {items.map((item, index) => (
           <div
-            className='text'
-            style={{ width: textWidth, height: textHeight }}
+            key={index}
+            className='menu-bar-item'
+            style={{ width: menuBarItemWidth, display: 'flex' }}
           >
-            {item.text}
+            <div className='icon-container'>
+              <img
+                src={item.icon}
+                alt='icon'
+                style={{ width: iconWidth, height: iconHeight }}
+              />
+            </div>
+            <div
+              className='text'
+              style={{ width: textWidth, height: textHeight }}
+            >
+              {item.text}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
