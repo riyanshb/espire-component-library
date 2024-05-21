@@ -2,8 +2,9 @@ import React from 'react';
 import './bottom_menubar.css';
 
 export interface BottomMenuBarItem {
-  icon: string;
+  icon: React.ElementType;
   text: string;
+  link: string;
 }
 
 export interface BottomMenuBarProps {
@@ -25,30 +26,38 @@ const ERFBottomMenuBar: React.FC<BottomMenuBarProps> = ({
 
   return (
     <div>
-      <div
-        className='bottom-container'
-        style={{ display: 'flex', flexDirection: 'row' }}
-      >
+      <div className='bottom-menu-bar' style={{ display: 'flex' }}>
         {items.map((item, index) => (
-          <div
+          <a
             key={index}
+            href={item.link}
             className='menu-bar-item'
-            style={{ width: menuBarItemWidth, display: 'flex' }}
+            style={{
+              width: menuBarItemWidth,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textDecoration: 'none',
+            }}
           >
             <div className='icon-container'>
-              <img
-                src={item.icon}
-                alt='icon'
-                style={{ width: iconWidth, height: iconHeight }}
+              <item.icon
+                style={{ width: iconWidth, height: iconHeight, color: 'grey' }}
               />
             </div>
             <div
               className='text'
-              style={{ width: textWidth, height: textHeight }}
+              style={{
+                width: textWidth,
+                height: textHeight,
+                color: 'grey',
+                textDecoration: 'none',
+              }}
             >
               {item.text}
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>

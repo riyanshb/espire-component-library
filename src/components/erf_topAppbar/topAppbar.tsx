@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { AppBar, Toolbar, IconButton, InputBase } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import MapIcon from '@mui/icons-material/Map';
@@ -17,10 +16,19 @@ const ERFTopAppbar: React.FC<ERFTopAppbarProps> = ({}) => {
     <>
       <AppBar
         position='static'
-        style={{ backgroundColor: '#fafafa', width: '100%', display: 'flex' }}
+        style={{
+          backgroundColor: '#fafafa',
+          width: '100%',
+          display: 'flex',
+          boxShadow: 'none',
+        }}
       >
         <Toolbar style={{ display: 'flex' }}>
-          <IconButton size='large' edge='start' sx={{ flex: 1 }}>
+          <IconButton
+            size='large'
+            edge='start'
+            style={{ flex: 1, marginRight: '10px' }}
+          >
             <MapIcon />
           </IconButton>
 
@@ -30,13 +38,12 @@ const ERFTopAppbar: React.FC<ERFTopAppbarProps> = ({}) => {
             style={{
               border: '1px solid #cccccc',
               borderRadius: '4px',
-              flex: 3,
+              flex: '50',
               height: '40px',
               paddingLeft: '8px',
             }}
           />
-
-          <IconButton size='large'>
+          <IconButton size='large' style={{ flex: 1, marginLeft: '10px' }}>
             <AddIcon />
           </IconButton>
         </Toolbar>

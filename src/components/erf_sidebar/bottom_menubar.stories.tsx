@@ -1,26 +1,39 @@
-import { Story, Meta } from '@storybook/react';
-import ERFBottomMenuBar, { BottomMenuBarProps } from './bottom_menubar';
+import ERFBottomMenuBar from './bottom_menubar';
+import { Home, Settings, Notifications } from '@mui/icons-material';
 
 export default {
-  title: 'Components/BottomMenuBar',
+  title: 'Components/ERFBottomMenuBar',
   component: ERFBottomMenuBar,
-} as Meta;
+  argTypes: {
+    iconWidth: { control: 'text' },
+    iconHeight: { control: 'text' },
+    textWidth: { control: 'text' },
+    textHeight: { control: 'text' },
+  },
+};
 
-const Template: Story<BottomMenuBarProps> = (args) => (
-  <ERFBottomMenuBar {...args} />
+interface StoryArgs {
+  iconWidth: string;
+  iconHeight: string;
+  textWidth: string;
+  textHeight: string;
+}
+
+const Template = (args: StoryArgs) => (
+  <ERFBottomMenuBar
+    {...args}
+    items={[
+      { icon: Home, text: 'Home', link: '/home' },
+      { icon: Settings, text: 'Settings', link: '/settings' },
+      { icon: Notifications, text: 'Notifications', link: '/notifications' },
+    ]}
+  />
 );
 
-export const FiveValues = Template.bind({});
-FiveValues.args = {
-  items: [
-    { icon: 'icon1.png', text: 'Value 1' },
-    { icon: 'icon2.png', text: 'Value 2' },
-    { icon: 'icon3.png', text: 'Value 3' },
-    { icon: 'icon4.png', text: 'Value 4' },
-    { icon: 'icon5.png', text: 'Value 5' },
-  ],
-  iconWidth: '30px',
-  iconHeight: '30px',
+export const Default = Template.bind({}) as any;
+Default.args = {
+  iconWidth: '24px',
+  iconHeight: '24px',
   textWidth: 'auto',
-  textHeight: 'auto',
+  textHeight: '16px',
 };

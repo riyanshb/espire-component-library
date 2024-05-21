@@ -11,9 +11,9 @@
     "module": "CommonJS",
     "allowJs": true,
     "baseUrl": ".",
-    "paths": {
-      "@rivanshu/components": ["node_modules/@rivanshu/components/*"]
-    },
+    // "paths": {
+    //   "@rivanshu/components": ["node_modules/@rivanshu/components/*"]
+    // },
     "skipLibCheck": true,
 
     /* Bundler mode */
