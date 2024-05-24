@@ -2,8 +2,9 @@ import React from 'react';
 import './bottom_menubar.css';
 
 export interface BottomMenuBarItem {
-  icon: string;
+  icon: React.ElementType;
   text: string;
+  link: string;
 }
 
 export interface BottomMenuBarProps {
@@ -24,28 +25,41 @@ const ERFBottomMenuBar: React.FC<BottomMenuBarProps> = ({
   const menuBarItemWidth = `${100 / items.length}%`;
 
   return (
-    <div className='bottom-menu-bar'>
-      {items.map((item, index) => (
-        <div
-          key={index}
-          className='menu-bar-item'
-          style={{ width: menuBarItemWidth }}
-        >
-          <div className='icon-container'>
-            <img
-              src={item.icon}
-              alt='icon'
-              style={{ width: iconWidth, height: iconHeight }}
-            />
-          </div>
-          <div
-            className='text'
-            style={{ width: textWidth, height: textHeight }}
+    <div>
+      <div className='bottom-menu-bar' style={{ display: 'flex' }}>
+        {items.map((item, index) => (
+          <a
+            key={index}
+            href={item.link}
+            className='menu-bar-item'
+            style={{
+              width: menuBarItemWidth,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textDecoration: 'none',
+            }}
           >
-            {item.text}
-          </div>
-        </div>
-      ))}
+            <div className='icon-container'>
+              <item.icon
+                style={{ width: iconWidth, height: iconHeight, color: 'grey' }}
+              />
+            </div>
+            <div
+              className='text'
+              style={{
+                width: textWidth,
+                height: textHeight,
+                color: 'grey',
+                textDecoration: 'none',
+              }}
+            >
+              {item.text}
+            </div>
+          </a>
+        ))}
+      </div>
     </div>
   );
 };

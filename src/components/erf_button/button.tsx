@@ -1,7 +1,7 @@
 import React from 'react';
 import './button.css';
 
-interface ButtonProps {
+export interface ButtonProps {
   text: string;
   variant?: 'primary' | 'secondary' | 'error' | 'text' | 'outlined';
   onClick?: () => void;

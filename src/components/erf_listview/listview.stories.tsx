@@ -1,51 +1,30 @@
-import { Story, Meta } from '@storybook/react';
-import ERFListItem, { ListItemProps } from './listview';
+import React from 'react';
+import ERFListItem from './listview';
+import PhoneIcon from '@mui/icons-material/Phone';
 
 export default {
-  title: 'Components/ListItem',
+  title: 'Components/ERFListItem',
   component: ERFListItem,
-} as Meta;
+  argTypes: {
+    text: { control: 'text' },
+    subtext: { control: 'text' },
+  },
+};
 
-const Template: Story<{ items: ListItemProps[] }> = ({ items }) => (
-  <>
-    {items.map((item, index) => (
-      <ERFListItem key={index} {...item} />
-    ))}
-  </>
+interface StoryArgs {
+  text?: string;
+  subtext?: string;
+  onClick?: () => void;
+}
+
+const Template: React.FC<StoryArgs> = (args: StoryArgs) => (
+  <ERFListItem {...args} icon={PhoneIcon} />
 );
 
-export const Default = Template.bind({});
-Default.args = {
-  items: [
-    {
-      icon: 'path/to/icon1.png',
-      text: 'Rivanshu',
-      subtext: 'rivanshu jain   ',
-      onClick: () => alert('Clicked List Item 1!'),
-    },
-    {
-      icon: 'path/to/icon2.png',
-      text: 'Rivanshu',
-      subtext: 'rivanshu jain   ',
-      onClick: () => alert('Clicked List Item 2!'),
-    },
-    {
-      icon: 'path/to/icon3.png',
-      text: 'Rivanshu',
-      subtext: 'rivanshu jain   ',
-      onClick: () => alert('Clicked List Item 3!'),
-    },
-    {
-      icon: 'path/to/icon4.png',
-      text: 'Rivanshu',
-      subtext: 'rivanshu jain   ',
-      onClick: () => alert('Clicked List Item 4!'),
-    },
-    {
-      icon: 'path/to/icon5.png',
-      text: 'Rivanshu',
-      subtext: 'rivanshu jain   ',
-      onClick: () => alert('Clicked List Item 5!'),
-    },
-  ],
+Template.defaultProps = {
+  text: 'Phone',
+  subtext: 'This is a phone icon',
+  onClick: () => {},
 };
+
+export const Default = Template.bind({});
