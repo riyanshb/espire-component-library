@@ -1,5 +1,6 @@
 import React from 'react';
 import './button.css';
+import { Button } from '@mui/material';
 
 export interface ButtonProps {
   text: string;
@@ -14,12 +15,43 @@ const ERFButton: React.FC<ButtonProps> = ({
   onClick,
   disabled,
 }) => {
-  const buttonClasses = `button ${variant}`;
-  return (
-    <button className={buttonClasses} onClick={onClick} disabled={disabled}>
+ 
+  let buttonComponent;
+  switch (variant) {
+    case 'primary':
+      buttonComponent = (<Button variant="contained" color="success"  onClick={() => {
+        onClick
+      }}>
       {text}
-    </button>
-  );
+    </Button>)
+      break;
+      case 'secondary':
+        buttonComponent = ( <Button color="secondary"  onClick={() => {
+          onClick
+        }}> {text}</Button>)
+      break;
+      case 'error':
+        buttonComponent =  (<Button variant="outlined" color="error"  onClick={() => {
+          onClick
+        }}>
+         {text}
+      </Button>)
+      break;
+      case 'text':
+        buttonComponent = ( <Button variant="text" onClick={() => {
+          onClick
+        }}> {text}</Button>)
+      break;
+      case 'outlined':
+        buttonComponent =  ( <Button variant="outlined" disabled onClick={() => {
+          onClick
+        }}> {text}</Button>)
+      break;
+  
+    default:
+      break;
+  }
+ return buttonComponent;
 };
 
 export default ERFButton;

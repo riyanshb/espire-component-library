@@ -8,3 +8,5 @@ export { default as ERFRadioButton } from './components/erf_radiobutton/erf_radi
 export { default as ERFToastMessage } from './components/erf_toast/erf_toast.tsx';
 export { default as ERFGoogleMap } from './components/erf_map/erf_map.tsx';
 export { default as ERFBox } from './components/erf_box/erf_box.tsx';
+export { LoginDialogue } from './components/LoginForm/LoginForm.tsx';
+

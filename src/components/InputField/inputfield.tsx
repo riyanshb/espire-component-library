@@ -1,8 +1,11 @@
 import React from 'react';
 import './inputfield.css';
+import {
+  TextField
+} from '@mui/material';
 
 interface InputFieldProps {
-  variant?: 'standard' | 'outlined' | 'filled' | 'error';
+  variant?: 'standard' | 'outlined' | 'filled' | 'error' | 'password' ;
   placeholder?: string;
 }
 
@@ -10,18 +13,31 @@ const InputField: React.FC<InputFieldProps> = ({
   variant = 'standard',
   placeholder,
 }) => {
-  let inputClass = 'input-field';
   if (variant === 'standard') {
-    inputClass += ' standard';
+    return <TextField id="standard-basic" label={placeholder} variant={variant}  size="small"/>
   } else if (variant === 'outlined') {
-    inputClass += ' outlined';
+    return <TextField id="outlined-basic" label={placeholder} variant={variant}  size="small"/>
   } else if (variant === 'filled') {
-    inputClass += ' filled';
+    return <TextField id="filled-basic" label={placeholder} variant={variant}  size="small"/>
   } else if (variant === 'error') {
-    inputClass += ' error';
+    return  <TextField
+    error
+    id="outlined-error"
+    label="Error"
+    defaultValue="Hello World"
+    size="small"
+  />
+  } else if (variant === 'password') {
+    return   <TextField
+    required
+    id="outlined-password-input"
+    label="Password"
+    type="password"
+    autoComplete="current-password"
+    size="small"
+    name="password"
+  />
   }
-
-  return <input className={inputClass} type='text' placeholder={placeholder} />;
 };
 
 export default InputField;

@@ -2,10 +2,9 @@
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ced4da;
-  width: 50%;
 }
 
-.input-field:focus {
+.focus {
   outline: none;
   border-color: #007bff;
 }

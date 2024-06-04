@@ -6,7 +6,12 @@ export default {
   component: InputField,
 } as Meta;
 
-const Template: Story<any> = (args) => <InputField {...args} />;
+interface InputFieldProps {
+  placeholder: string;
+  variant?: 'standard' | 'outlined' | 'filled' | 'error' | 'password' ;
+}
+
+const Template: Story<InputFieldProps> = (args) => <InputField {...args} />;
 
 export const Standard = Template.bind({});
 Standard.args = {
@@ -31,3 +36,10 @@ Error.args = {
   variant: 'error',
   placeholder: 'Enter your text here',
 };
+
+export const Password = Template.bind({});
+Error.args = {
+  variant: 'password',
+  placeholder: 'Enter your text here',
+};
+
