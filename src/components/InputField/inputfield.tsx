@@ -7,18 +7,22 @@ import {
 interface InputFieldProps {
   variant?: 'standard' | 'outlined' | 'filled' | 'error' | 'password' ;
   placeholder?: string;
+  setValue: Function;
+  textId: string;
 }
 
 const InputField: React.FC<InputFieldProps> = ({
   variant = 'standard',
   placeholder,
+  setValue,
+  textId,
 }) => {
   if (variant === 'standard') {
-    return <TextField id="standard-basic" label={placeholder} variant={variant}  size="small"/>
+    return <TextField id="standard-basic" label={placeholder} variant={variant}  size="small" onChange={e=>{setValue(e, textId)}}/>
   } else if (variant === 'outlined') {
-    return <TextField id="outlined-basic" label={placeholder} variant={variant}  size="small"/>
+    return <TextField id="outlined-basic" label={placeholder} variant={variant}  size="small" onChange={e=>{setValue(e, textId)}}/>
   } else if (variant === 'filled') {
-    return <TextField id="filled-basic" label={placeholder} variant={variant}  size="small"/>
+    return <TextField id="filled-basic" label={placeholder} variant={variant}  size="small" onChange={e=>{setValue(e, textId)}}/>
   } else if (variant === 'error') {
     return  <TextField
     error
@@ -26,6 +30,7 @@ const InputField: React.FC<InputFieldProps> = ({
     label="Error"
     defaultValue="Hello World"
     size="small"
+    onChange={e=>{setValue(e, textId)}}
   />
   } else if (variant === 'password') {
     return   <TextField
@@ -36,6 +41,7 @@ const InputField: React.FC<InputFieldProps> = ({
     autoComplete="current-password"
     size="small"
     name="password"
+    onChange={e=>{setValue(e, textId)}}
   />
   }
 };

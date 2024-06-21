@@ -9,6 +9,8 @@ export default {
 interface InputFieldProps {
   placeholder: string;
   variant?: 'standard' | 'outlined' | 'filled' | 'error' | 'password' ;
+  setValue: Function;
+  textId: string;
 }
 
 const Template: Story<InputFieldProps> = (args) => <InputField {...args} />;

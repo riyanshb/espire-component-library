@@ -1,3 +1,5 @@
+export { SearchField } from './components/SearchField/SearchField.tsx';
+
 export { default as ERFAppbar } from './components/erf_appbar/appbar.tsx';
 export { default as ERFButton } from './components/erf_button/button.tsx';
 export { default as ERFListItem } from './components/erf_listview/listview.tsx';

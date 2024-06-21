@@ -9,6 +9,8 @@ export default {
 interface ButtonStoryProps {
   text: string;
   variant?: 'primary' | 'secondary' | 'error' | 'text' | 'outlined';
+  onClick: Function;
+  buttonId: string;
 }
 
 const Template: Story<ButtonStoryProps> = (args) => <ERFButton {...args} />;
